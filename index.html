@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" integrity="sha256-CnZmNCHHUMy22/PJclCIISZ5Ib4MnUu+7ee5YNxtsZQ=" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="index.css" />
+<title>Awesome Books</title>
+</head>
+
+<body>
+    
+<main>
+
+<nav>
+<div class="heading">
+<p>Awesome books</p>
+</div>
+<ul class="links">
+<li><a id="render-books" class='active' href="#">List</a></li>
+<li class="line"></li>
+<li><a id="form-container" href="#">Add new</a></li>
+<li class="line"></li>
+<li><a id="contact-form" href="#">Contact</a></li>
+</ul>
+</nav>
+
+<p id="date"></p>
+
+<div class='render-books show-me'>
+<h1 class="header">All awesome books</h1>
+<hr/>
+<div id="render-content"></div>
+</div>
+
+<div class="form-container">
+<h2>Add a new book</h2>
+<form id="booksForm" action="#">
+<input id="title" type="text" placeholder="Title"><br />
+<input id="author" type="text" placeholder="Author"><br />
+<input id="addBook" type="submit" value='Add'></input>
+</form>
+</div>
+
+<div class="contact-form">
+<h2>Contact Information</h2>
+<div class="text">
+<p>Do you have any questions or you just want to say "Hello"?</p>
+<p>You can reach out to us!</p>
+</div>
+<ul>
+<li>Our email: email@gmail.com</li>
+<li>Our phone number: 0123456789</li>
+<li>Our address: Streetname 22, 84503 City, Country</li>
+</ul>
+</div>
+
+<footer>
+<p>Copyright: &copy; 2022 made by Dejan</p>
+</footer>
+</main>
+
+<script type="module" src="index.js"></script>
+<!-- <script type="module" src="modules/array.js"></script> -->
+<script  src="navi.js"></script>
+<!-- <script type="module" src="modules/variables.js"></script> --> -->
+<!-- <script type="module" src="modules/classBook.js"></script> -->
+
+
+</body>
+
+</html>
+
+
+
+ 

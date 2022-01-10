@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,300;1,400;1,700&family=Roboto:ital@1&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  background: url(img/bkg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.heading p {
+  font-family: 'Popins', sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 17px;
+  color: #fff;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #16123f;
+  border: 2px solid rgb(84, 131, 233);
+  padding: 5px 10px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#date {
+  position: relative;
+  top: 60px;
+  text-align: end;
+  padding: 0 10px;
+  color: #16123f ;
+  font-weight: bolder;
+}
+
+.line {
+  border-right: 2px solid rgb(84, 131, 233);
+  padding: 0 2px;
+ 
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0;
+  color: #16123f;
+}
+
+
+ .render-books {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  top: 25vh;
+  
+}
+
+#render-content {
+  padding: 10px;
+}
+
+#render-content ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #fff;
+  margin-top: 5px;;
+}
+
+#render-content ul h2 {
+  font-size: 17px;
+  font-family: 'Popins', sans-serif;
+  color: #fff;
+  font-style: italic;
+}
+
+#render-content li a {
+  background-color: #16123f;
+  padding: 5px 10px;
+}
+
+.render-books a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: 1px solid #fff;
+  padding: 2px;
+}
+
+#render-content ul:nth-child(odd) {
+  background: #16123f;
+  color: #fff;
+}
+
+#render-content ul:nth-child(even) {
+  background: #fff;
+  color: #16123f
+}
+
+#render-content ul:nth-child(even) h2 {
+ color: #16123f
+}
+
+#render-content ul:nth-child(even) a {
+  border: 1px solid #16123f;
+  color: #16123f;
+  background-color: #fff;
+}
+
+.form-container {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  top: 33vh;
+  color: white;
+  background: #16123f;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#booksForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+input {
+  padding: 3px 16px;
+  color: #16123f;
+  font-weight: bolder;
+}
+
+#addBook {
+  align-self: end;
+  padding: 3px 14px;
+  background: #fff;
+  border: 1px solid #16123f;
+  color: #16123f;
+}
+
+hr {
+  width: 70px;
+  margin: auto;
+  border: 1px solid #16123f;
+}
+
+.contact-form {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  top: 32vh;
+  padding: 10px;
+}
+
+.show-me {
+  display: flex;
+}
+
+.contact-form ul {
+  margin: 19px 50px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #16123f;
+}
+
+.contact-form p {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin: 17px;
+  color: #16123f;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background-color: #16123f;
+  border: 2px solid rgb(84, 131, 233);
+  padding: 10px 10px;
+}
+
+footer p {
+  font-size: 15px;
+  color: #fff;
+}
+
+@media only screen and (min-width:678px) {
+  .heading p {
+    font-size: 24px;
+  }
+
+  nav {
+    padding: 10px 50px;
+  }
+
+  #date {
+    padding: 0 50px;
+    color: #fff;
+  }
+  
+  .line {
+    border-right: 2px solid rgb(84, 131, 233);
+    padding: 15px 20px;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin-left: 30px;
+  } 
+
+  nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .render-books {
+    position: relative;
+    top: 20vh;
+  }
+
+  .header {
+    font-size: 37px;
+    text-align: center;
+  }
+
+  #render-content {
+    padding: 50px 350px;
+  }
+
+  #render-content ul {
+    padding: 5px 0;
+  }
+
+  #render-content ul h2 {
+    font-size: 24px;
+  }
+  #render-content li a {
+    background-color: #16123f;
+  }
+
+  .render-books a {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .contact-form {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 300px;
+    padding: 10px;
+  }
+  
+  .contact-form ul {
+    margin: 19px 50px;
+  }
+  
+  .contact-form h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 17px 0;
+  }
+
+  .form-container {
+    margin: 0 300px;
+    padding: 50px 20px;
+  }
+
+  footer {
+    padding: 10px 50px;
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+}
+
+.links .active {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+}
+
+.links a:not(.active):hover {
+  border-bottom: 3px solid #fff;
+}
+
+#render-content ul:nth-child(odd) a:hover {
+  background: rgb(184, 21, 21);
+  color: #fff;
+}
+
+#render-content ul:nth-child(even) a:hover {
+  background: rgb(184, 21, 21);
+  color: #fff;
+}
+
+#addBook:hover {
+  padding: 3px 15px;
+  background: #16123f;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+
+
