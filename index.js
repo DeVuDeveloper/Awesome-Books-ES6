@@ -1,4 +1,3 @@
-import * as navilist from './modules/navi.js';
 
 import {
   renderBooks,
@@ -8,69 +7,42 @@ import {
   localBooks,
 } from './modules/variables.js';
 
-let books = [];
-
-class Book {
-  constructor(title, author) {
-    this.id = Math.random().toString(36).substring(2, 7);
-    this.title = title;
-    this.author = author;
-  }
-
-  static addItem(title, author) {
-    if (title !== '' && author !== '') {
-      const newBook = new Book(title, author);
-      books.push(newBook);
-    }
-  }
-
-  static deleteItem(id) {
-    books = books.filter((book) => book.id !== id);
-  }
-}
-
-function renderBook() {
-  renderBooks.innerHTML = '';
-  books.forEach((book) => {
-    const oneBook = document.createElement('ul');
-    const titleByAuthor = document.createElement('li');
-    const remove = document.createElement('li');
-    const header = document.createElement('h2');
-    renderBooks.appendChild(oneBook);
-    oneBook.appendChild(titleByAuthor);
-    titleByAuthor.appendChild(header);
-    header.innerText = `"${book.title}" by ${book.author}`;
-    oneBook.appendChild(remove);
-    remove.innerHTML = `<a class='delete' rel='${book.id}' href="#">Remove<a>`;
-  });
-}
-
-function getStore() {
-  if (localBooks) {
-    books = JSON.parse(localBooks);
-  }
-}
-
-function setStore() {
-  localStorage.setItem('booksStore', JSON.stringify(books));
-}
+import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
+import {Book, getStore, books} from './modules/classBook.js';
+import {renderBook}  from './modules/render.js';
+import {setStore}  from './modules/setStore.js';
 
 function addNewBook(event) {
-  event.preventDefault();
-  Book.addItem(titleInput.value, authorInput.value);
-  setStore();
+ event.preventDefault();
+ Book.addItem(titleInput.value, authorInput.value);
+  setStore(books);
   titleInput.value = '';
   authorInput.value = '';
-  renderBook();
+  renderBook(renderBooks, books);
 }
 
 function deleteBook(e) {
-  Book.deleteItem(e.target.rel);
-  setStore();
-  renderBook();
+  Book.deleteBook(e.target.rel);
+  setStore(books);
+  renderBook(renderBooks, books);
 }
 
 addBook.onclick = addNewBook;
 renderBooks.onclick = deleteBook;
-getStore();
-renderBook();
+getStore(localBooks);
+renderBook(renderBooks, books);
+
+const a = document.querySelectorAll('.links a');
+a.forEach((e) => {
+  e.onclick = () => {
+    if (e.classList.contains('active')) {
+      return;
+    }
+    a.forEach((i) => i.classList.remove('active'));
+    e.classList.add('active');
+    const showMe = document.querySelector('.show-me');
+    const divClass = document.querySelector(`.${e.id}`);
+    showMe.classList.remove('show-me');
+    divClass.classList.add('show-me');
+  };
+});
