@@ -1,5 +1,3 @@
-$ yarn workspace @socialgouv/eslint-config-recommended eslint test.js;
-
 let books = [];
 
 function getStore(localBooks) {
