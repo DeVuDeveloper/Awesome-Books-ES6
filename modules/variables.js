@@ -5,5 +5,5 @@ const addBook = document.querySelector('#addBook');
 const localBooks = localStorage.getItem('booksStore');
 
 export {
-    renderBooks, titleInput, authorInput, addBook, localBooks
+  renderBooks, titleInput, authorInput, addBook, localBooks,
 };

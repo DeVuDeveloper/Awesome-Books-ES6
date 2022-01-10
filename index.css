@@ -17,7 +17,7 @@ main {
   0% {
     transform: translateX(-100%);
   }
-   
+
   100% {
     transform: translateX(0);
   }
@@ -92,13 +92,6 @@ nav ul li a {
   margin-top: 5px;
 }
 
-#render-content ul h2 {
-  font-size: 17px;
-  font-family: 'Popins', sans-serif;
-  color: #fff;
-  font-style: italic;
-}
-
 .render-books a {
   text-decoration: none;
   font-size: 12px;
@@ -112,8 +105,6 @@ nav ul li a {
   background-color: #16123f;
   padding: 5px 10px;
 }
-
-
 
 .form-container {
   display: none;
@@ -182,6 +173,11 @@ hr {
   color: #16123f;
 }
 
+footer p {
+  font-size: 15px;
+  color: #fff;
+}
+
 .contact-form p {
   font-size: 17px;
   font-weight: bold;
@@ -200,11 +196,6 @@ footer {
   padding: 10px 10px;
 }
 
-footer p {
-  font-size: 15px;
-  color: #fff;
-}
-
 .heading p {
   font-family: 'Popins', sans-serif;
   font-weight: bolder;
@@ -214,7 +205,15 @@ footer p {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
+#render-content ul h2 {
+  font-size: 17px;
+  font-family: 'Popins', sans-serif;
+  color: #fff;
+  font-style: italic;
+}
+
 @media only screen and (min-width:678px) {
+
   .heading p {
     font-size: 24px;
   }
@@ -264,6 +263,10 @@ footer p {
     margin-bottom: 30px;
   }
 
+  .contact-form ul {
+    margin: 19px 50px;
+  }
+
   #render-content ul {
     padding: 5px 0;
   }
@@ -283,10 +286,6 @@ footer p {
     position: relative;
     top: 300px;
     padding: 10px;
-  }
-
-  .contact-form ul {
-    margin: 19px 50px;
   }
 
   .contact-form p {
