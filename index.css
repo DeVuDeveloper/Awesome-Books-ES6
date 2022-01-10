@@ -78,34 +78,6 @@ nav ul li a {
   top: 25vh;
 }
 
-#render-content {
-  padding: 10px;
-}
-
-#render-content ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  padding: 10px;
-  border: 1px solid #fff;
-  margin-top: 5px;
-}
-
-.render-books a {
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  border: 1px solid #fff;
-  padding: 2px;
-}
-
-#render-content li a {
-  background-color: #16123f;
-  padding: 5px 10px;
-}
-
 .form-container {
   display: none;
   flex-direction: column;
@@ -196,15 +168,6 @@ footer {
   padding: 10px 10px;
 }
 
-.heading p {
-  font-family: 'Popins', sans-serif;
-  font-weight: bolder;
-  font-style: italic;
-  font-size: 17px;
-  color: #fff;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
 #render-content ul h2 {
   font-size: 17px;
   font-family: 'Popins', sans-serif;
@@ -212,8 +175,30 @@ footer {
   font-style: italic;
 }
 
-@media only screen and (min-width:678px) {
+#render-content {
+  padding: 10px;
+}
 
+#render-content ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #fff;
+  margin-top: 5px;
+}
+
+.render-books a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: 1px solid #fff;
+  padding: 2px;
+}
+
+@media only screen and (min-width: 678px) {
   .heading p {
     font-size: 24px;
   }
@@ -308,24 +293,13 @@ footer {
   }
 }
 
-#render-content ul:nth-child(odd) {
-  background: #16123f;
+.heading p {
+  font-family: 'Popins', sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 17px;
   color: #fff;
-}
-
-#render-content ul:nth-child(even) {
-  background: #fff;
-  color: #16123f;
-}
-
-#render-content ul:nth-child(even) h2 {
-  color: #16123f;
-}
-
-#render-content ul:nth-child(even) a {
-  border: 1px solid #16123f;
-  color: #16123f;
-  background-color: #fff;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .links .active {
@@ -356,4 +330,24 @@ footer {
 
 #render-content li a {
   background-color: #16123f;
+}
+
+#render-content ul:nth-child(odd) {
+  background: #16123f;
+  color: #fff;
+}
+
+#render-content ul:nth-child(even) {
+  background: #fff;
+  color: #16123f;
+}
+
+#render-content ul:nth-child(even) h2 {
+  color: #16123f;
+}
+
+#render-content ul:nth-child(even) a {
+  border: 1px solid #16123f;
+  color: #16123f;
+  background-color: #fff;
 }
