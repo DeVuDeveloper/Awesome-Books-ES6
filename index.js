@@ -7,16 +7,16 @@ import {
 } from './modules/variables.js';
 
 import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
-import {Book, getStore, books} from './modules/classBook.js';
-import {renderBook}  from './modules/render.js';
-import {setStore}  from './modules/setStore.js';
+import { Book, getStore, books } from './modules/classBook.js';
+import { renderBook } from './modules/render.js';
+import { setStore } from './modules/setStore.js';
 
-document.getElementById('date')
+const date = document.getElementById('date');
 date.innerText = DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
 
 function addNewBook(event) {
- event.preventDefault();
- Book.addItem(titleInput.value, authorInput.value);
+  event.preventDefault();
+  Book.addItem(titleInput.value, authorInput.value);
   setStore(books);
   titleInput.value = '';
   authorInput.value = '';
