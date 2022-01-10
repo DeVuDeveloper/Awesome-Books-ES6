@@ -7,12 +7,39 @@ import {
 } from './modules/variables.js';
 
 import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
-import { Book, getStore, books } from './modules/classBook.js';
+// import { Book} from './modules/classBook.js';
 import renderBook from './modules/render.js';
 import setStore from './modules/setStore.js';
 
 const date = document.getElementById('date');
 date.innerText = DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
+
+let books = [];
+
+function getStore(localBooks) {
+  if (localBooks) {
+    books = JSON.parse(localBooks);
+  }
+}
+
+class Book {
+  constructor(title, author) {
+    this.id = Math.random().toString(36).substring(2, 7);
+    this.title = title;
+    this.author = author;
+  }
+
+  static addItem(title, author) {
+    if (title !== '' && author !== '') {
+      const newBook = new Book(title, author);
+      books.push(newBook);
+    }
+  }
+
+  static deleteBook(id) {
+    books = books.filter((book) => book.id !== id);
+  }
+}
 
 function addNewBook(event) {
   event.preventDefault();
