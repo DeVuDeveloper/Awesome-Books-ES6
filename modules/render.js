@@ -1,8 +1,8 @@
    let books = [];
    const renderBooks = document.getElementById('render-content');
 
-   class Render {
-   static renderBook () {
+  
+     function renderBook () {
      renderBooks.innerHTML = ''
      books.forEach(book => {
      const oneBook = document.createElement('ul')
@@ -23,5 +23,6 @@
     //  anchor.innerText=`Remove`;
     });
    }
- }
- export{Render};
+ 
+
+

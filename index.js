@@ -13,29 +13,29 @@ import {renderBooks, titleInput, authorInput, addBook, localBooks} from '/module
 
 
 
- import {Book} from '/modules/classBook.js';
+//  import {Book} from '/modules/classBook.js';
 
-//  class Book {
-//    constructor (title, author) {
-//      this.id = Math.random().toString(36).substring(2,7);
-//      this.title = title;
-//      this.author = author;
-//   }
+ class Book {
+   constructor (title, author) {
+     this.id = Math.random().toString(36).substring(2,7);
+     this.title = title;
+     this.author = author;
+  }
 
-//    static addItem(title, author) {
-//      if (title !== '' && author !== '') {
-//        const newBook = new Book(title, author);
-//        books.push(newBook);
-//      }
-//    }
+   static addItem(title, author) {
+     if (title !== '' && author !== '') {
+       const newBook = new Book(title, author);
+       books.push(newBook);
+     }
+   }
 
-//    static deleteItem(id) {
-//      books = books.filter(book => book.id !== id);
-//    }
-//  }
+   static deleteItem(id) {
+     books = books.filter(book => book.id !== id);
+   }
+ }
   // import {Render} from '/modules/render.js';
- class Render {
-   static renderBook () {
+ 
+    function  renderBook () {
      renderBooks.innerHTML = ''
      books.forEach(book => {
      const oneBook = document.createElement('ul')
@@ -56,44 +56,42 @@ import {renderBooks, titleInput, authorInput, addBook, localBooks} from '/module
 //     //  anchor.innerText=`Remove`;
     });
     }
-  }
- class StoreG {
- static getStore () {
+  
+     function  getStore () {
      if (localBooks) {
        books = JSON.parse(localBooks);
      }
    }
- }
+ 
 
- class StoreS {
-   static setStore () {
+ 
+    function setStore () {
      localStorage.setItem('booksStore', JSON.stringify(books));
    }
- }
+ 
 
 
 
- class Add {
-     static addNewBook (event) {
+ 
+     function addNewBook (event) {
      event.preventDefault();
      Book.addItem(titleInput.value, authorInput.value);
-     StoreS.setStore();
+     setStore();
      titleInput.value = '';
      authorInput.value = '';
-     Render.renderBook();
+     renderBook();
    }
- }
+ 
 
- class Delete {
-   static deleteBook (e) {
+ 
+   function deleteBook (e) {
      Book.deleteItem(e.target.rel);
-     StoreS.setStore();
-     Render.renderBook();
+     setStore();
+     renderBook();
    }
- }
+ 
 
- addBook.onclick = Add.addNewBook;
- console.log('addBook:', books)
- renderBooks.onclick =  Delete.deleteBook;
- StoreG.getStore();
- Render.renderBook();
+ addBook.onclick = addNewBook;
+ renderBooks.onclick =  deleteBook;
+ getStore();
+ renderBook();
