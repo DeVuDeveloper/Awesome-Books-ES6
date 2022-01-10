@@ -1,19 +1,20 @@
-document.getElementById("date");
+let date = document.getElementById('date');
+let luxon;
 date.innerText = luxon.DateTime.now()
-  .toFormat("MMMM dd, yyyy, hh:mm:ss a")
+  .toFormat('MMMM dd, yyyy, hh:mm:ss a')
   .toString();
 
-const a = document.querySelectorAll(".links a");
+const a = document.querySelectorAll('.links a');
 a.forEach((e) => {
   e.onclick = () => {
-    if (e.classList.contains("active")) {
+    if (e.classList.contains('active')) {
       return;
     }
-    a.forEach((i) => i.classList.remove("active"));
+    a.forEach((i) => i.classList.remove('active'));
     e.classList.add("active");
-    let showMe = document.querySelector(".show-me");
-    let divClass = document.querySelector(`.${e.id}`);
-    showMe.classList.remove("show-me");
-    divClass.classList.add("show-me");
+    const showMe = document.querySelector('.show-me');
+    const divClass = document.querySelector(`.${e.id}`);
+    showMe.classList.remove('show-me');
+    divClass.classList.add('show-me');
   };
 });

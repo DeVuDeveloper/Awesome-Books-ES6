@@ -1,11 +1,11 @@
-let books = [];
 import {
   renderBooks,
   titleInput,
   authorInput,
   addBook,
   localBooks,
-} from "./modules/variables.js";
+} from './modules/variables.js';
+let books = [];
 
 class Book {
   constructor(title, author) {
@@ -15,7 +15,7 @@ class Book {
   }
 
   static addItem(title, author) {
-    if (title !== "" && author !== "") {
+    if (title !== '' && author !== '') {
       const newBook = new Book(title, author);
       books.push(newBook);
     }
@@ -27,24 +27,17 @@ class Book {
 }
 
 function renderBook() {
-  renderBooks.innerHTML = "";
+  renderBooks.innerHTML = '';
   books.forEach((book) => {
-    const oneBook = document.createElement("ul");
-    const titleByAuthor = document.createElement("li");
-    const remove = document.createElement("li");
-    const anchor = document.createElement("a");
-    const header = document.createElement("h2");
+    const oneBook = document.createElement('ul');
+    const titleByAuthor = document.createElement('li');
+    const remove = document.createElement('li');
     renderBooks.appendChild(oneBook);
     oneBook.appendChild(titleByAuthor);
     titleByAuthor.appendChild(header);
     header.innerText = `"${book.title}" by ${book.author}`;
     oneBook.appendChild(remove);
-    remove.innerHTML = `<a class='delete' rel="${book.id}" href="#">Remove<a>`;
-    //  remove.appendChild(anchor);
-    //  anchor.classList.add('delete');
-    //  anchor.setAttribute('rel', "${book.id}");
-    //  anchor.href='#';
-    //  anchor.innerText=`Remove`;
+    remove.innerHTML = `<a class='delete' rel='${book.id}' href="#">Remove<a>`;
   });
 }
 
@@ -55,15 +48,15 @@ function getStore() {
 }
 
 function setStore() {
-  localStorage.setItem("booksStore", JSON.stringify(books));
+  localStorage.setItem('booksStore', JSON.stringify(books));
 }
 
 function addNewBook(event) {
   event.preventDefault();
   Book.addItem(titleInput.value, authorInput.value);
   setStore();
-  titleInput.value = "";
-  authorInput.value = "";
+  titleInput.value = '';
+  authorInput.value = '';
   renderBook();
 }
 
@@ -78,9 +71,6 @@ renderBooks.onclick = deleteBook;
 getStore();
 renderBook();
 
-document.getElementById("date");
-date.innerText = luxon.DateTime.now()
-  .toFormat("MMMM dd, yyyy, hh:mm:ss a")
-  .toString();
 
-import * as navilist from "./modules/navi.js";
+
+import * as navilist from './modules/navi.js';
