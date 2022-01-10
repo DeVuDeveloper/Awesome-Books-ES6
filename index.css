@@ -13,19 +13,10 @@ main {
   background-size: cover;
 }
 
-a,
-a:hover,
-a:visited {
-  text-decoration: none;
-  
-}
-
-
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
-
   100% {
     transform: translateX(0);
   }
@@ -73,14 +64,13 @@ nav ul li a {
   top: 60px;
   text-align: end;
   padding: 0 10px;
-  color: #16123f ;
+  color: #16123f;
   font-weight: bolder;
 }
 
 .line {
   border-right: 2px solid rgb(84, 131, 233);
   padding: 0 2px;
- 
 }
 
 .header {
@@ -89,13 +79,11 @@ nav ul li a {
   color: #16123f;
 }
 
-
- .render-books {
+.render-books {
   display: none;
   flex-direction: column;
   position: relative;
   top: 25vh;
-  
 }
 
 #render-content {
@@ -109,7 +97,8 @@ nav ul li a {
   list-style: none;
   padding: 10px;
   border: 1px solid #fff;
-  margin-top: 5px;;
+  margin-top: 5px;
+  ;
 }
 
 #render-content ul h2 {
@@ -144,7 +133,7 @@ nav ul li a {
 }
 
 #render-content ul:nth-child(even) h2 {
- color: #16123f
+  color: #16123f
 }
 
 #render-content ul:nth-child(even) a {
@@ -256,7 +245,7 @@ footer p {
     padding: 0 50px;
     color: #fff;
   }
-  
+
   .line {
     border-right: 2px solid rgb(84, 131, 233);
     padding: 15px 20px;
@@ -265,7 +254,7 @@ footer p {
 
   nav ul li {
     margin-left: 30px;
-  } 
+  }
 
   nav ul li a {
     font-size: 20px;
@@ -294,6 +283,7 @@ footer p {
   #render-content ul h2 {
     font-size: 24px;
   }
+
   #render-content li a {
     background-color: #16123f;
   }
@@ -310,17 +300,17 @@ footer p {
     top: 300px;
     padding: 10px;
   }
-  
+
   .contact-form ul {
     margin: 19px 50px;
   }
-  
+
   .contact-form h2 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 30px;
   }
-  
+
   .contact-form p {
     font-size: 20px;
     font-weight: bold;
@@ -335,7 +325,7 @@ footer p {
   footer {
     padding: 10px 50px;
   }
-
+  
   footer p {
     font-size: 20px;
   }
@@ -366,7 +356,3 @@ footer p {
   border: 1px solid #fff;
   color: #fff;
 }
-
-
-
-
