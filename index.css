@@ -302,10 +302,6 @@ footer {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-#render-content li a {
-  background-color: #16123f;
-}
-
 .links .active {
   padding-bottom: 5px;
   border-bottom: 2px solid #fff;
@@ -315,12 +311,22 @@ footer {
   border-bottom: 3px solid #fff;
 }
 
-#render-content ul:nth-child(odd) a:hover {
+#render-content li a {
+  background-color: #16123f;
+}
+
+#render-content ul:nth-child(even) a {
+  border: 1px solid #16123f;
+  color: #16123f;
+  background-color: #fff;
+}
+
+#render-content ul:nth-child(even) a:hover {
   background: rgb(184, 21, 21);
   color: #fff;
 }
 
-#render-content ul:nth-child(even) a:hover {
+#render-content ul:nth-child(odd) a:hover {
   background: rgb(184, 21, 21);
   color: #fff;
 }
@@ -344,10 +350,4 @@ footer {
 
 #render-content ul:nth-child(even) h2 {
   color: #16123f;
-}
-
-#render-content ul:nth-child(even) a {
-  border: 1px solid #16123f;
-  color: #16123f;
-  background-color: #fff;
 }

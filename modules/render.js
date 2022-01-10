@@ -1,6 +1,6 @@
 export default function renderBook(renderBooks, books) {
   renderBooks.innerHTML = '';
-  books.forEach(book => {
+  books.forEach((book) => {
     const oneBook = document.createElement('ul');
     const titleByAuthor = document.createElement('li');
     const remove = document.createElement('li');
