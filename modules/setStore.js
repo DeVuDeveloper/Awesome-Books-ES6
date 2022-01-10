@@ -1,4 +1,4 @@
-function setStore (books) {
-  localStorage.setItem('booksStore', JSON.stringify(books))
+function setStore(books) {
+  localStorage.setItem('booksStore', JSON.stringify(books));
 }
-export { setStore }
+export { setStore };

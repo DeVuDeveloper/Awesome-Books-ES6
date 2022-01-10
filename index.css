@@ -199,10 +199,6 @@ footer {
 }
 
 @media only screen and (min-width: 678px) {
-  .heading p {
-    font-size: 24px;
-  }
-
   nav {
     padding: 10px 50px;
   }
@@ -273,12 +269,6 @@ footer {
     padding: 10px;
   }
 
-  .contact-form p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 17px 0;
-  }
-
   .form-container {
     margin: 0 300px;
     padding: 50px 20px;
@@ -291,6 +281,16 @@ footer {
   footer p {
     font-size: 20px;
   }
+
+  .contact-form p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 17px 0;
+  }
+
+  .heading p {
+    font-size: 24px;
+  }
 }
 
 .heading p {
@@ -300,6 +300,10 @@ footer {
   font-size: 17px;
   color: #fff;
   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#render-content li a {
+  background-color: #16123f;
 }
 
 .links .active {
@@ -326,10 +330,6 @@ footer {
   background: #16123f;
   border: 1px solid #fff;
   color: #fff;
-}
-
-#render-content li a {
-  background-color: #16123f;
 }
 
 #render-content ul:nth-child(odd) {

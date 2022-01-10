@@ -8,7 +8,7 @@ import {
 
 import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 import { Book, getStore, books } from './modules/classBook.js';
-import { renderBook } from './modules/render.js';
+import renderBook from './modules/render.js';
 import { setStore } from './modules/setStore.js';
 
 const date = document.getElementById('date');
