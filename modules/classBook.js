@@ -1,10 +1,10 @@
 let books = [];
 
 function getStore(localBooks) {
-  if (localBooks) {
-  books = JSON.parse(localBooks);
- }
-}
+    if (localBooks) {
+      books = JSON.parse(localBooks);
+    }
+  }
 
 class Book {;
   constructor(title, author) {
