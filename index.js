@@ -1,3 +1,4 @@
+import * as navilist from './modules/navi.js';
 import {
   renderBooks,
   titleInput,
@@ -5,6 +6,7 @@ import {
   addBook,
   localBooks,
 } from './modules/variables.js';
+
 let books = [];
 
 class Book {
@@ -32,6 +34,7 @@ function renderBook() {
     const oneBook = document.createElement('ul');
     const titleByAuthor = document.createElement('li');
     const remove = document.createElement('li');
+    const header = document.createElement('h2');
     renderBooks.appendChild(oneBook);
     oneBook.appendChild(titleByAuthor);
     titleByAuthor.appendChild(header);
@@ -70,7 +73,3 @@ addBook.onclick = addNewBook;
 renderBooks.onclick = deleteBook;
 getStore();
 renderBook();
-
-
-
-import * as navilist from './modules/navi.js';

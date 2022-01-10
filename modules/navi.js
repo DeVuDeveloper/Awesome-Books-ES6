@@ -1,4 +1,4 @@
-let date = document.getElementById('date');
+const date = document.getElementById('date');
 let luxon;
 date.innerText = luxon.DateTime.now()
   .toFormat('MMMM dd, yyyy, hh:mm:ss a')
@@ -11,7 +11,7 @@ a.forEach((e) => {
       return;
     }
     a.forEach((i) => i.classList.remove('active'));
-    e.classList.add("active");
+    e.classList.add('active');
     const showMe = document.querySelector('.show-me');
     const divClass = document.querySelector(`.${e.id}`);
     showMe.classList.remove('show-me');
