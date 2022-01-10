@@ -3,7 +3,7 @@
 Live preview [here](https://vudej.github.io/Awesome-Books-ES6/). 
 
 ## Screenshots
-![Example screenshot](img/awesome.png)
+![Example screenshot](img/awesome.PNG)
 
 ## Contents
 * [Navbar](#navbar)
