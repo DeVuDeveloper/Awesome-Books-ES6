@@ -8,8 +8,8 @@ import {
 
 import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 // import { Book} from './modules/classBook.js';
-import {renderBook} from './modules/render.js';
-import {setStore} from './modules/setStore.js';
+import renderBook from './modules/render.js';
+import setStore from './modules/setStore.js';
 
 const date = document.getElementById('date');
 date.innerText = DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
@@ -20,7 +20,7 @@ const getStore = (localBooks) => {
   if (localBooks) {
     books = JSON.parse(localBooks);
   }
-}
+};
 
 class Book {
   constructor(title, author) {
@@ -48,12 +48,12 @@ const addNewBook = (event) => {
   titleInput.value = '';
   authorInput.value = '';
   renderBook(renderBooks, books);
-}
+};
 const deleteBook = (e) => {
   Book.deleteBook(e.target.rel);
   setStore(books);
   renderBook(renderBooks, books);
-}
+};
 addBook.onclick = addNewBook;
 renderBooks.onclick = deleteBook;
 getStore(localBooks);
