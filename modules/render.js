@@ -1,4 +1,4 @@
-  const renderBook = (renderBooks, books) => {
+const renderBook = (renderBooks, books) => {
   renderBooks.innerHTML = '';
   books.forEach((book) => {
     const oneBook = document.createElement('ul');
