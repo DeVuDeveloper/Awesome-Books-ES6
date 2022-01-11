@@ -10,9 +10,9 @@ import {
 import renderBook from './modules/render.js';
 import setStore from './modules/setStore.js';
 
+const luxon = window.luxon;
 const date = document.getElementById('date');
-let luxonTime = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
-date.innerText = luxonTime;
+date.innerText = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
 
 let books = [];
 
