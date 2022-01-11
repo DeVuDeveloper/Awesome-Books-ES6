@@ -11,7 +11,8 @@ import renderBook from './modules/render.js';
 import setStore from './modules/setStore.js';
 
 const date = document.getElementById('date');
-date.innerText = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
+const luxonTime = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
+date.innerText = luxonTime;
 
 let books = [];
 
