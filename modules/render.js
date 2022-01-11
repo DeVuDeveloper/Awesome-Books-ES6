@@ -1,4 +1,4 @@
-export default function renderBook(renderBooks, books) {
+export const renderBook = (renderBooks, books) => {
   renderBooks.innerHTML = '';
   books.forEach((book) => {
     const oneBook = document.createElement('ul');
@@ -12,4 +12,4 @@ export default function renderBook(renderBooks, books) {
     oneBook.appendChild(remove);
     remove.innerHTML = `<a class='delete' rel='${book.id}' href="#">Remove</a>`;
   });
-}
+} 
