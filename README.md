@@ -55,12 +55,6 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](LICENSE) licensed.​
-5
-## Screenshots
-6
-![Example screenshot](img/awesome.PNG)
-7
-
 
 ## Contact
 Created by [@VuDej](https://github.com/VuDej) - feel free to contact me!
